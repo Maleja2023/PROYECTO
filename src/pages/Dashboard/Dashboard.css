@@ -1,0 +1,91 @@
+
+:root {
+  --primary: #4f46e5;
+  --background: #f9fafb;
+  --text-color: #111827;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --error: #ef4444;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.dashboard-content p {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 1rem;
+  }
+
+  .dashboard-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-content p {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content h1 {
+    font-size: 1.25rem;
+  }
+
+  .dashboard-content p {
+    font-size: 0.9rem;
+  }
+
+  .loading {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}

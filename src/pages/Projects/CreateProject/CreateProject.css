@@ -1,0 +1,138 @@
+/* Contenedor principal */
+.create-project {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Botón de volver */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.back-btn:hover {
+  background-color: #666;
+}
+
+/* Título */
+.create-project h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Formulario general */
+.create-project form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Etiquetas */
+.create-project label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Inputs y textareas */
+.create-project input,
+.create-project textarea,
+.create-project select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.create-project textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Botones de añadir */
+.create-project button[type="button"] {
+  background-color: #228be6;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: fit-content;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+.create-project button[type="button"]:hover {
+  background-color: #1864ab;
+}
+
+/* Botón de enviar */
+.create-project button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.create-project button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Contenedor para cada hito y miembro */
+.create-project .hito-container,
+.create-project .miembro-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .create-project {
+    padding: 15px;
+  }
+
+  .create-project h1 {
+    font-size: 1.5rem;
+  }
+
+  .create-project button[type="button"],
+  .create-project button[type="submit"],
+  .back-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-project form {
+    gap: 12px;
+  }
+
+  .create-project input,
+  .create-project textarea,
+  .create-project select {
+    font-size: 0.95rem;
+  }
+
+  .create-project h1 {
+    font-size: 1.3rem;
+  }
+}

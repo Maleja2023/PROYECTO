@@ -1,0 +1,228 @@
+
+.project-detail {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.back-button {
+  background: #eee;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-header h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: white;
+  text-transform: capitalize;
+}
+.status-badge.enproceso {
+  background-color: #f0ad4e;
+}
+.status-badge.completado {
+  background-color: #5cb85c;
+}
+.status-badge.pendiente {
+  background-color: #d9534f;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+ 
+}
+
+.meta-item {
+  flex: 1 1 300px;
+  background: #f9f9f9;
+  padding: 0.75rem;
+  border-left: 4px solid #7768ff;
+  
+}
+
+.project-section {
+  margin: 2rem 0;
+  
+}
+
+span{
+  background-color: black;
+}
+
+.project-section h3 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #7768ff;
+  padding-bottom: 0.25rem;
+}
+
+.objective {
+  margin-bottom: 1rem;
+}
+
+.objectives-list {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.timeline {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.timeline-item {
+  flex: 1 1 200px;
+}
+
+.milestones-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.milestone-card {
+  background: #f1f1f1;
+  padding: 1rem;
+  border-left: 4px solid #7768ff;
+}
+
+.milestone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.milestone-status {
+  font-size: 0.8rem;
+  background: #999;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 15px;
+}
+
+.edit-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.save-button,
+.cancel-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-button {
+  background-color: #7768ff;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #ddd;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.loading-container,
+.error-message {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loading-spinner {
+  border: 4px solid #ccc;
+  border-top: 4px solid #7768ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 1rem auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .meta-item {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-detail {
+    padding: 1rem;
+  }
+
+  .project-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .status-badge {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .save-button,
+  .cancel-button {
+    width: 100%;
+  }
+}
